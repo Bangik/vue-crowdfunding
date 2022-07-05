@@ -6,8 +6,30 @@
     <div class="w-auto md:w-2/4 lg:w-2/3 flex justify-center items-center">
       <div class="w-full lg:w-1/2 px-10 lg:px-0">
         <h2 class="font-normal mb-6 text-3xl text-white">
-          Sign In to Your Account
+          Sign Up Account
         </h2>
+        <div class="mb-6">
+          <div class="mb-4">
+            <label class="font-normal text-lg text-white block mb-3">Full Name</label>
+            <input
+              type="text"
+              class="auth-form focus:outline-none focus:bg-purple-hover focus:shadow-outline focus:border-purple-hover-stroke focus:text-gray-100"
+              placeholder="Write Your Name Here"
+              value="Julia Keeva Hanna"
+            >
+          </div>
+        </div>
+        <div class="mb-6">
+          <div class="mb-4">
+            <label class="font-normal text-lg text-white block mb-3">Occupation</label>
+            <input
+              type="text"
+              class="auth-form focus:outline-none focus:bg-purple-hover focus:shadow-outline focus:border-purple-hover-stroke focus:text-gray-100"
+              placeholder="Write your occupation here"
+              value="Graphic Designer"
+            >
+          </div>
+        </div>
         <div class="mb-6">
           <div class="mb-4">
             <label class="font-normal text-lg text-white block mb-3">Email Address</label>
@@ -25,7 +47,7 @@
             <input
               type="password"
               class="auth-form focus:outline-none focus:bg-purple-hover focus:shadow-outline focus:border-purple-hover-stroke focus:text-gray-100"
-              placeholder="Write your password here"
+              placeholder="Type your password here"
               value="nasigorenglimaribbu"
             >
           </div>
@@ -34,20 +56,20 @@
           <div class="mb-4">
             <button
               class="block w-full bg-orange-button hover:bg-green-button text-white font-semibold px-6 py-4 text-lg rounded-full"
-              @click="$router.push({ path: '/' })"
+              @click="$router.push({ path: '/upload' })"
             >
-              Sign In
+              Continue Sign Up
             </button>
           </div>
         </div>
         <div class="text-center">
           <p class="text-white text-md">
-            Don't have account?
+            Already have account?
             <nuxt-link
-              to="/register"
+              to="/login"
               class="no-underline text-orange-button"
             >
-              Sign Up
+              Sign In
             </nuxt-link>.
           </p>
         </div>
@@ -58,14 +80,14 @@
 
 <script>
 export default {
-  name: 'LoginPage',
+  name: 'RegisterPage',
   layout: 'auth'
 }
 </script>
 
 <style scoped>
     .auth-background {
-        background-image: url("/sign-in-background.jpg");
+        background-image: url("/sign-up-background.jpg");
         background-position: center;
         background-size: cover;
     }
